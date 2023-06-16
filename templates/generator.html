@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Survey Form QR Code Generator</h1>
+        <div class="form">
+            <label for="url">Enter ID:</label>
+            <input type="text" id="url" placeholder="Enter string to append to URL">
+            <button onclick="generateQRCode()">Generate QR Code</button>
+        </div>
+        <div id="qrcode"></div>
+        <hr>
+        <div class="csv-download">
+            <a href="https://gabrielmiamire.pythonanywhere.com/static/responses.csv" download>Download responses</a>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='qrcode.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
