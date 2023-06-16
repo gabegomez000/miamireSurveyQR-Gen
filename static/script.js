@@ -1,12 +1,23 @@
-function generateQRCode() {
-    var urlInput = document.getElementById('url');
-    var url = 'https://gabrielmiamire.pythonanywhere.com?regid=' + urlInput.value; // Replace 'example.com' with your desired URL
-    var qrcodeContainer = document.getElementById('qrcode');
+var qrcodeContainer = document.getElementById('qrcode');
 
-    // Generate QR code using the QRCode library
+function generateQRCode() {
+    var urlInput = document.getElementById('ID');
+    var url = 'https://gabrielmiamire.pythonanywhere.com?regid=' + urlInput.value;
+
+    // Remove the existing QR code element
+    while (qrcodeContainer.firstChild) {
+        qrcodeContainer.removeChild(qrcodeContainer.firstChild);
+    }
+
+    // Generate QR code using qrcode.js
     var qrcode = new QRCode(qrcodeContainer, {
         text: url,
-        width: 200, // Adjust the size of the QR code as needed
+        width: 200,
         height: 200
     });
+
+    // Center the QR code on the screen
+    qrcodeContainer.style.display = 'flex';
+    qrcodeContainer.style.justifyContent = 'center';
+    qrcodeContainer.style.alignItems = 'center';
 }
