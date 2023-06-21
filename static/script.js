@@ -20,4 +20,9 @@ function generateQRCode() {
     qrcodeContainer.style.display = 'flex';
     qrcodeContainer.style.justifyContent = 'center';
     qrcodeContainer.style.alignItems = 'center';
+
+    // Make the QR code clickable
+    qrcodeContainer.addEventListener('click', function() {
+        window.open(url);
+    });
 }

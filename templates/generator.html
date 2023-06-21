@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <title>QR Code Generator</title>
 </head>
 <body>
     <div class="container">
-        <h1>Survey Form QR Code Generator</h1>
+        <div class="header">
+            <img src="static/images/miamirelogo.png" class="custom-image" alt="Header Image" />
+        </div>
+        <h1>Survey QR Code<br>Generator</h1>
         <div class="form">
             <label for="ID">Enter ID:</label>
-            <input type="text" id="ID" placeholder="Enter the ID to append to URL">
+            <input type="text" id="ID" placeholder="Enter ID to append to the URL:">
             <button onclick="generateQRCode()">Generate QR Code</button>
         </div>
-        <hr>
         <div id="qrcode"></div>
         <hr>
         <div class="csv-download">
-            <a href="https://gabrielmiamire.pythonanywhere.com/static/responses.csv" download>Download responses</a>
+            <a href="https://gabrielmiamire.pythonanywhere.com/static/responses.csv" download>Download All Responses</a>
         </div>
     </div>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <script src="{{ url_for('static', filename='qrcode.min.js') }}"></script>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>

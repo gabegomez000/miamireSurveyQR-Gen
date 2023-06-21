@@ -9,6 +9,11 @@
     margin-bottom: 20px;
 }
 
+.custom-image {
+    width: 50%; /* Set the desired width */
+    height: auto; /* Let the height adjust proportionally */
+}
+
 input[type="text"] {
     width: 100%;
     padding: 10px;
@@ -19,8 +24,9 @@ button {
     padding: 10px 20px;
 }
 
-qrcode {
+#qrcode {
     margin-bottom: 20px;
+    cursor:pointer;
 }
 
 .csv-download {
