@@ -27,8 +27,6 @@ function generateQRCode() {
     // Make the QR code clickable
     qrcodeContainer.removeEventListener('click', openURL); // Remove previous event listener
     qrcodeContainer.addEventListener('click', openURL); // Add new event listener
-
-
 }
 
 var qrcodeContainer = document.getElementById('qrcode');
