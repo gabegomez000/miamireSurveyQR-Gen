@@ -1,28 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="EN">
 <head>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <title>QR Code Generator</title>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <img src="static/images/miamirelogo.png" class="custom-image" alt="Header Image" />
+            <img src="/static/images/miamirelogo.png" class="custom-image" alt="Header Image" />
         </div>
-        <h1>Survey QR Code<br>Generator</h1>
+        <h1>Survey Form<br>Tools</h1>
         <div class="form">
-            <label for="ID">Enter ID:</label>
-            <input type="text" id="ID" placeholder="Enter ID to append to the URL:">
+            <label for="ID">Enter Class GUID:</label>
+            <input type="text" id="ID" placeholder="Enter the desired Class ID:">
             <button onclick="generateQRCode()">Generate QR Code</button>
+            <!--<button onclick="
+                var script = document.createElement('script');
+                script.src = '/static/emailScript.js';
+                document.head.appendChild(script);
+                ">Send Out Survey Email</button> --!>
+
         </div>
         <div id="qrcode"></div>
         <hr>
         <div class="csv-download">
-            <a href="https://miamiresurveyform.azurewebsites.net/export" download>Download All Responses</a>
+            <a href="https://miamire-survey-form.onrender.com/export" download>Download All Responses</a>
         </div>
     </div>
 
     <script src="{{ url_for('static', filename='qrcode.min.js') }}"></script>
     <script src="{{ url_for('static', filename='qrscript.js') }}"></script>
+    <script src="{{ url_for('static', filename='emailscript.js') }}"></script>
+    <script src="https://apis.google.com/js/client-libraries/oauth2/v2/google-oauth-client.js"></script>
+
 </body>
 </html>

@@ -1,6 +1,10 @@
 {
   "dependencies": {
+    "fs": "^0.0.1-security",
+    "google-oauth": "^0.0.2",
     "mdb-ui-kit": "^6.4.0",
-    "qrcode": "^1.5.3"
+    "qrcode": "^1.5.3",
+    "smtp": "^0.1.4",
+    "tls": "^0.0.1"
   }
 }

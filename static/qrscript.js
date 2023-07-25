@@ -1,6 +1,6 @@
-function generateQRCode() {
+function generateQRCode(){
     var urlInput = document.getElementById('ID');
-    var url = 'https://miamiresurveyform.azurewebsites.net/?regid=' + urlInput.value;
+    var url = 'https://miamire-survey-form.onrender.com/?regid=' + urlInput.value;
 
     // Remove the existing QR code element
     while (qrcodeContainer.firstChild) {
